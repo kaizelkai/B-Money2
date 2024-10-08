@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #131947; /* Fond similaire à bmoney.live */
+    background-color: #161d54; /* Fond similaire à bmoney.live */
     color: white;
     padding-top: 60px; /* Espace pour le menu fixe */
 }
@@ -133,37 +133,67 @@ nav a:hover .menuEffet {
 }
 
 /* Boutons sociaux */
+
 .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Réduit l'espacement entre les liens */
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.social-buttons2 {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 30px;
     padding: 20px;
-    
+    /* Couleur de fond avec transparence */
     border-radius: 10px; /* Arrondir les coins si nécessaire */
 }
 
-.social-buttons a {
+.social-buttons2 a {
     display: inline-flex;
     align-items: center;
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: rgba(26, 26, 26, 0.8); /* Couleur de fond avec transparence */
+    /* Couleur de fond avec transparence */
     color: white;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
     gap: 8px;
 }
 
+.social-buttons a {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    
+}
+
 .social-buttons a:hover {
-    background-color: rgba(255, 152, 0, 0.8); /* Changement de couleur au survol */
+ /* Changement de couleur au survol */
     transform: scale(1.1);
 }
 
 .social-buttons img {
-    width: 15px;
-    height: 15px;
-    filter: sepia(100%) hue-rotate(90deg) saturate(200%);
+    width: 80px;
+    height: 80px;
+    
+}
+
+.social-buttons2 img {
+    width: 80px;
+    height: 80px;
+    
+}
+
+.social-buttons img:hover{
+    transform: scale(1.1);
+
 }
 
 /* Media Queries pour la réactivité */
@@ -177,7 +207,7 @@ nav a:hover .menuEffet {
     }
 
     .social-buttons img {
-        width: 15px; /* Réduit la taille des icônes sociales */
+         /* Réduit la taille des icônes sociales */
     }
 
     .image-container {
@@ -217,6 +247,13 @@ nav a:hover .menuEffet {
     padding: 10px; /* Ajoutez du padding pour que l'effet soit plus visible */
     border-radius: 5px; /* Ajoutez des coins arrondis */
 
+    background-color: #040931;
+    border-radius: 50px;
+    border: 2px solid rgb(223, 215, 6); 
+
+}
+.bt_buy a:hover{
+    background-color: rgb(223, 215, 6);
 }
 .reseau{
     width: 55%;
@@ -228,16 +265,30 @@ nav a:hover .menuEffet {
 }
 
 
-.boxp{background-color: rgb(171, 207, 97);
+.boxp{
+    background-color: #040931;
     padding: 20px;
     margin: 50px;
     display: flex;
     flex-wrap: wrap;
     border-radius: 50px;
-    border: 10px solid black;
+    border: 10px solid rgb(223, 215, 6);
     align-items: center; 
 }
 
+.boxp2{
+    background-color: #040931;
+    padding: 20px;
+    margin: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 50px;
+    
+    align-items: center; 
+}
+.boxp21{
+    width: 30%;
+}
 .swiper {
     width: 50%;
 /*min-width: 500px;*/
@@ -270,4 +321,14 @@ nav a:hover .menuEffet {
 }
 .is-sp-content{
     align-items: center;
+}
+
+.is-character-1, .is-character-3, .is-character-2{
+    
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.is-heading{
+    font-family: 'Protest Strike';
 }
