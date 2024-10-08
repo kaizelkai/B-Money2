@@ -1,42 +1,27 @@
+const imageContainer = document.getElementById('imageContainer');
+        const paulImage = document.getElementById('paulImage');
 
-        // Variables pour l'image et le conteneur
-        const image = document.getElementById('paulImage');
-        const container = document.querySelector('.image-container');
-        const offset = 50; // Périmètre de mouvement
-        let isMouseOverImage = false; // État de la souris sur l'image
+        // Fonction pour gérer le mouvement de l'image
+    imageContainer.addEventListener('mousemove', (event) => {
+        const rect = imageContainer.getBoundingClientRect();
+        const imageRect = paulImage.getBoundingClientRect();
 
-        // Événement pour le mouvement de la souris
-        container.addEventListener('mousemove', (event) => {
-            if (isMouseOverImage) {
-                // Calcul des positions de l'image
-                const mouseX = event.clientX;
-                const mouseY = event.clientY;
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
 
-                // Déterminer la position de l'image
-                const containerRect = container.getBoundingClientRect();
-                const imageWidth = image.clientWidth;
-                const imageHeight = image.clientHeight;
+        // Calcul de la nouvelle position de l'image en veillant à ce qu'elle ne sorte pas des limites
+        const imageX = Math.max(Math.min(x - imageRect.width / 2, rect.width - imageRect.width), 0);
+        const imageY = Math.max(Math.min(y - imageRect.height / 2, rect.height - imageRect.height), 0);
 
-                // Calcul des nouvelles positions
-                let newX = mouseX - containerRect.left - imageWidth / 2;
-                let newY = mouseY - containerRect.top - imageHeight / 2;
+        // Applique la nouvelle position
+        paulImage.style.position = 'absolute';
+        paulImage.style.left = `${imageX}px`;
+        paulImage.style.top = `${imageY}px`;
+    });
 
-                // Limiter les mouvements dans le périmètre défini
-                newX = Math.max(-offset, Math.min(newX, containerRect.width - imageWidth + offset));
-                newY = Math.max(-offset, Math.min(newY, containerRect.height - imageHeight + offset));
-
-                // Appliquer les nouvelles positions
-                image.style.transform = `translate(${newX}px, ${newY}px)`;
-            }
-        });
-
-        // Événements pour gérer l'état de la souris sur l'image
-        image.addEventListener('mouseenter', () => {
-            isMouseOverImage = true; // La souris est sur l'image
-        });
-
-        image.addEventListener('mouseleave', () => {
-            isMouseOverImage = false; // La souris n'est plus sur l'image
-            image.style.transform = 'translate(0, 0)'; // Réinitialiser la position de l'image
-        });
- 
+    // Réinitialise la position de l'image si la souris sort du conteneur
+    imageContainer.addEventListener('mouseleave', () => {
+        paulImage.style.position = 'relative'; // Remet l'image dans le flux normal
+        paulImage.style.left = `0px`; // Retour à la position d'origine
+        paulImage.style.top = `0px`; // Retour à la position d'origine
+    });

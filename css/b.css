@@ -1,0 +1,219 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #131947; /* Fond similaire à bmoney.live */
+    color: white;
+    padding-top: 60px; /* Espace pour le menu fixe */
+}
+
+/* Menu du haut fixe */
+nav {
+    margin-left: 16%;
+    margin-right: 16%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+header{
+    background-color: rgba(26, 26, 26, 0.7); /* Fond transparent avec opacité */
+    backdrop-filter: blur(10px); /* Effet de flou en arrière-plan */
+    position: fixed;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+    padding: 15px;
+    align-items: center;
+}
+
+nav a {
+    position: relative; /* Positionnement relatif pour le sous-menu */
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    overflow: hidden; /* Empêche le texte de déborder */
+    padding: 10px; /* Ajoutez du padding pour que l'effet soit plus visible */
+    border-radius: 5px; /* Ajoutez des coins arrondis */
+}
+
+.menuEffet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 254, 252, 0.2); /* Couleur de fond pour le menu effet */
+    border-radius: 5px; /* Arrondir les coins du fond */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition pour l'effet */
+    transform: scale(0); /* Commencez par être invisible */
+    z-index: -1; /* Positionner derrière le texte */
+    opacity: 0.5;
+}
+
+nav a:hover .menuEffet {
+    transform: scale(1); /* L'effet devient visible au survol */
+    opacity: 0.2;
+}
+
+/* Section principale */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 50px;
+}
+
+/* Texte à gauche de la photo */
+.info {
+    text-align: left;
+    margin-right: 50px;
+    
+}
+
+.info h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.info p {
+
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Image de Paul Le Roux */
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.image-container {
+    position: relative; /* Positionnement relatif pour l'image */
+    width: 400px; /* Largeur de l'image */
+    height: 400px; /* Hauteur de l'image */
+    display: flex; /* Utilisation de flex pour centrer */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    overflow: hidden; /* Empêche le débordement de l'image */
+}
+
+.detected {
+    position: relative; /* Positionnement relatif pour l'image */
+    width: 400px; /* Largeur de l'image */
+    height: 400px; /* Hauteur de l'image */
+    display: flex; /* Utilisation de flex pour centrer */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center;
+    transition: transform 0.3s ease; /* Ajout de transition pour le mouvement */
+}
+
+.image-container .detected img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    position: absolute; /* Utiliser position absolute pour l'image */
+    z-index: 1; /* Positionner derrière le cercle */
+    transition: transform 0.3s ease;
+}
+
+/* Boutons sociaux */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 20px;
+    
+    border-radius: 10px; /* Arrondir les coins si nécessaire */
+}
+
+.social-buttons a {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgba(26, 26, 26, 0.8); /* Couleur de fond avec transparence */
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    gap: 8px;
+}
+
+.social-buttons a:hover {
+    background-color: rgba(255, 152, 0, 0.8); /* Changement de couleur au survol */
+    transform: scale(1.1);
+}
+
+.social-buttons img {
+    width: 15px;
+    height: 15px;
+    filter: sepia(100%) hue-rotate(90deg) saturate(200%);
+}
+
+/* Media Queries pour la réactivité */
+@media (max-width: 1005px) {
+    nav a {
+        font-size: 8px; /* Réduit la taille de la police sur les petits écrans */
+    }
+
+    .info h1 {
+        font-size: 28px; /* Ajuste la taille des titres */
+    }
+
+    .social-buttons img {
+        width: 15px; /* Réduit la taille des icônes sociales */
+    }
+
+    .image-container {
+        width: 250px; /* Ajustement pour les petits écrans */
+        height: 250px; /* Ajustement pour les petits écrans */
+    }
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: none;
+}
+.iconTo img{
+    width: 70px;
+    height: 70px;
+    position: relative;
+}
+.bt_buy a{
+    position: relative; /* Positionnement relatif pour le sous-menu */
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 10px;
+    text-transform: uppercase;
+    overflow: hidden; /* Empêche le texte de déborder */
+    padding: 10px; /* Ajoutez du padding pour que l'effet soit plus visible */
+    border-radius: 5px; /* Ajoutez des coins arrondis */
+
+}
+.reseau{
+    width: 55%;
+}
+.set2{
+    margin-left: 10px;
+    padding-left: 10px;
+}

@@ -4,224 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B MONEY</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0f0f0f; /* Fond similaire à bmoney.live */
-            color: white;
-            padding-top: 60px; /* Espace pour le menu fixe */
-        }
-
-        /* Menu du haut fixe */
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: rgba(26, 26, 26, 0.7); /* Fond transparent avec opacité */
-            backdrop-filter: blur(10px); /* Effet de flou en arrière-plan */
-            padding: 15px;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        nav a {
-            position: relative; /* Positionnement relatif pour le sous-menu */
-            color: white;
-            margin: 0 20px;
-            text-decoration: none;
-            font-size: 10px;
-            text-transform: uppercase;
-            overflow: hidden; /* Empêche le texte de déborder */
-            padding: 10px; /* Ajoutez du padding pour que l'effet soit plus visible */
-            border-radius: 5px; /* Ajoutez des coins arrondis */
-        }
-
-        .menuEffet {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(255, 254, 252, 0.2); /* Couleur de fond pour le menu effet */
-            border-radius: 5px; /* Arrondir les coins du fond */
-            transition: transform 0.3s ease; /* Transition pour l'effet */
-            transform: scale(0); /* Commencez par être invisible */
-            z-index: -1; /* Positionner derrière le texte */
-            opacity: 0.5;
-            border-radius: 15px;
-        }
-
-        nav a:hover .menuEffet {
-            transform: scale(1); /* L'effet devient visible au survol */
-            opacity: 0.2;
-            border-radius: 15px;
-        }
-
-        /* Section principale */
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 80vh;
-            padding: 50px;
-            position: relative; /* Ajoutez cette ligne */
-        }
-
-        /* Texte à gauche de la photo */
-        .info {
-            text-align: left;
-            margin-right: 50px;
-        }
-
-        .info h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        .info p {
-            font-size: 24px;
-            color: #ff9800;
-            margin-bottom: 20px;
-        }
-
-        /* Image de Paul Le Roux */
-        .image-container {
-            position: relative; /* Positionnement relatif pour l'image */
-        }
-
-        .image-container img {
-            max-width: 300px;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-            cursor: pointer; /* Change le curseur en main */
-            position: absolute; /* Pour permettre le déplacement */
-        }
-
-        .image-container img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Boutons sociaux */
-        .social-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-            padding: 20px;
-            background-size: cover; /* Ajuster l'image pour couvrir tout l'espace */
-            background-position: center; /* Centrer l'image */
-            width: 100%; /* Largeur de la div */
-            height: 150px; /* Hauteur de la div */
-            border-radius: 10px; /* Arrondir les coins si nécessaire */
-        }
-
-        .social-buttons a {
-            display: inline-flex;
-            align-items: center;
-            padding: 10px 20px;
-            border-radius: 5px;
-            background-color: rgba(26, 26, 26, 0.8); /* Couleur de fond avec transparence */
-            color: white;
-            text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            gap: 8px;
-        }
-
-        .social-buttons a:hover {
-            background-color: rgba(255, 152, 0, 0.8); /* Changement de couleur au survol */
-            transform: scale(1.1);
-        }
-
-        .social-buttons img {
-            width: 100px;
-            height: 100px;
-        }
-
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/b.css">
+    
 </head>
 <body>
-
-    <!-- Menu de navigation fixe -->
-    <nav>
-        <div class="menubg">
-            <a href="#about">
+    <header>
+        <div class="iconTo">
+            <img src="image/paul.png">
+        </div>
+        <!-- Menu de navigation fixe -->
+        <nav>
+            
+            <div class="menubg">
+                <a href="#about">
+                    <div class="menuEffet"></div>
+                    ABOUT
+                </a>
+                <a href="#tokenomics">
+                    <div class="menuEffet"></div>
+                    Tokenomics
+                </a>
+                <a href="#roadmap">
+                    <div class="menuEffet"></div>
+                    Roadmap
+                </a>
+                <a href="#satoshi">
+                    <div class="menuEffet"></div>
+                    True Satoshi
+                </a>
+            </div>
+        </nav>
+        <div class="bt_buy">
+            <a href="#buy">
                 <div class="menuEffet"></div>
-                ABOUT
-            </a>
-            <a href="#tokenomics">
-                <div class="menuEffet"></div>
-                Tokenomics
-            </a>
-            <a href="#roadmap">
-                <div class="menuEffet"></div>
-                Roadmap
-            </a>
-            <a href="#satoshi">
-                <div class="menuEffet"></div>
-                True Satoshi
+                BUY NOW
             </a>
         </div>
-    </nav>
+    </header>
+    
 
     <!-- Section principale avec photo et description -->
-    <div class="container">
-        <!-- Texte à gauche de la photo -->
-        <div class="info">
-            <h1>Paul Le Roux</h1>
-            <p>Real Satoshi Nakamoto</p>
-        </div>
+    <main>
+        <section class="section">
+            <div class="container">
+                <!-- Texte à gauche de la photo -->
+                <div class="reseau">
+                    <div class="info">
+                        <h1>Paul Le Roux</h1>
+                        <p>Real Satoshi Nakamoto</p>
+                        <p>Paul Le Roux- $SATOSHI book written by Evan Ratliff about Le Roux, he admitted that a "former employee of Le Roux's, now in prison" suggested Le Roux had been the inventor of Bitcoin</p>
+                    </div>
+                    <!-- Boutons sociaux sous la section principale -->
+                    <div class="social-buttons">
+                        <a href="https://t.me" target="_blank" aria-label="Telegram">
+                            <img src="image/telegram-icon.png" alt="Icône Telegram">
+                        </a>
+                        <a href="https://x.com" target="_blank" aria-label="X">
+                            <img src="image/x-icon.png" alt="Icône X">
+                        </a>
+                        <a href="https://dextools.io" target="_blank" aria-label="Dextools">
+                            <img src="image/dextools-icon.png" alt="Icône Dextools">
+                        </a>
+                    </div>
+                </div>
+        
+                <!-- Image à droite qui bouge au survol -->
+                <div class="image-container" id="imageContainer">
+                    <div class="detected">
+                        <img src="image/paul.png" alt="Paul Le Roux" id="paulImage">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <!-- Image à droite qui bouge au survol -->
-        <div class="image-container">
-            <img src="image/paul.png" alt="Paul Le Roux" id="paulImage">
-        </div>
-    </div>
+    <main>
+        <section  class="section">
+            <div class="container">
+                <div class="image-container">
+                    <div class="detected">
+                        <img src="image/paul.png" alt="Paul Le Roux" id="paulImage">
+                    </div>
+                </div>
 
-    <!-- Boutons sociaux sous la section principale avec image de fond -->
-    <div class="social-buttons">
-        <a href="https://t.me" target="_blank">
-            <img src="image/telegram-icon.png" alt="Telegram">
-        </a>
-        <a href="https://x.com" target="_blank">
-            <img src="image/x-icon.png" alt="X">
-        </a>
-        <a href="https://dextools.io" target="_blank">
-            <img src="image/dextools-icon.png" alt="Dextools">
-        </a>
-    </div>
+                <div class="reseau">
+                    <div class="info set2">
+                        <h1>Paul Le Roux- $SATOSHI</h1>
+                        <p>Paul Le Roux: "As more and more human activity becomes computerised" 🚀</p>
+                        <p>Paul Le Roux: "Strong Encryption is the mechanism with which to combat these intrusions"</p>
+                        <P>Paul Le Roux: 10 years later we have managed to grow the currency that guarantee economic freedom to the people</P>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
 
-    <script>
-        // JavaScript pour déplacer l'image
-        const image = document.getElementById('paulImage');
-        let isDragging = false;
+    <main>
+        <section>
+            
+        </section>
+    </main>
 
-        image.addEventListener('mousedown', (event) => {
-            isDragging = true;
-            offsetX = event.clientX - image.getBoundingClientRect().left;
-            offsetY = event.clientY - image.getBoundingClientRect().top;
-            document.body.style.cursor = 'grabbing'; // Change le curseur
-        });
-
-        document.addEventListener('mouseup', () => {
-            isDragging = false;
-            document.body.style.cursor = 'default'; // Réinitialise le curseur
-        });
-
-        document.addEventListener('mousemove', (event) => {
-            if (isDragging) {
-                image.style.left = (event.clientX - offsetX) + 'px';
-                image.style.top = (event.clientY - offsetY) + 'px';
-                image.style.position = 'absolute'; // Assurez-vous que l'image est positionnée absolument
-            }
-        });
-    </script>
+    <script src="js/imageMouve.js"></script>
 </body>
 </html>
