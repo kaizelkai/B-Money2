@@ -1,4 +1,11 @@
-
+@font-face {
+    font-family: 'Speeday';
+    src: url('font/speeday/Speeday-Bold-FFP.woff') format('woff'),
+         url('fonts/speeday/Speeday-Regular-FFP.woff') format('woff'),
+         url('fonts/speeday/Speeday-Regular-FFP.woff') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 * {
     margin: 0;
     padding: 0;
@@ -35,6 +42,7 @@ header{
 }
 
 nav a {
+    font-family: 'Protest Strike';
     position: relative; /* Positionnement relatif pour le sous-menu */
     color: white;
     margin: 0 20px;
@@ -47,6 +55,7 @@ nav a {
 }
 
 .menuEffet {
+    font-family: 'Protest Strike';
     position: absolute;
     top: 0;
     left: 0;
@@ -72,7 +81,7 @@ nav a:hover .menuEffet {
     justify-content: center;
     align-items: center;
     
-    padding: 50px;
+    padding-top: 50px;
 }
 
 /* Texte à gauche de la photo */
@@ -83,6 +92,7 @@ nav a:hover .menuEffet {
 }
 
 .info h1 {
+    font-family: 'Protest Strike';
     font-size: 36px;
     margin-bottom: 10px;
 }
@@ -202,9 +212,19 @@ nav a:hover .menuEffet {
         font-size: 8px; /* Réduit la taille de la police sur les petits écrans */
     }
 
-    .info h1 {
-        font-size: 28px; /* Ajuste la taille des titres */
+    nav {
+        display: flex;
+        justify-content: center;
+        
     }
+
+    .info h1 {
+        font-size: 18px; /* Ajuste la taille des titres */
+    }
+    p{
+        font-size: 10px;
+    }
+
 
     .social-buttons img {
          /* Réduit la taille des icônes sociales */
@@ -214,14 +234,25 @@ nav a:hover .menuEffet {
         width: 250px; /* Ajustement pour les petits écrans */
         height: 250px; /* Ajustement pour les petits écrans */
     }
-    /*.boxp{
+    .boxp{
+        display: flex;
         flex-wrap: wrap-reverse;
     }
     .swiper {
-        width: 100%;
-    
+        width: 100%;  
+    }
+    .container {
         
-    }*/
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: center;
+        size: 10PX;
+    }
+    .reseau{
+        margin-left: -20%;
+        width: 150%;
+        align-items: center;
+    }
 }
 
 .section {
@@ -237,6 +268,7 @@ nav a:hover .menuEffet {
     position: relative;
 }
 .bt_buy a{
+    font-family: 'Protest Strike';
     position: relative; /* Positionnement relatif pour le sous-menu */
     color: white;
     margin: 0 20px;
@@ -283,11 +315,13 @@ nav a:hover .menuEffet {
     display: flex;
     flex-wrap: wrap;
     border-radius: 50px;
-    
+    position: relative;
     align-items: center; 
 }
 .boxp21{
     width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
 }
 .swiper {
     width: 50%;
@@ -331,4 +365,62 @@ nav a:hover .menuEffet {
 
 .is-heading{
     font-family: 'Protest Strike';
+}
+
+/* Style pour centrer toute la section */
+.boxp21 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    text-align: center; /* Centre le texte à l'intérieur */
+}
+
+/* Centre les éléments à l'intérieur de .boxp2 */
+.boxp2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style pour le texte "SOCIALS" */
+.social-header {
+    font-family: 'Speeday';
+    font-size: 24px;
+    margin-bottom: 20px; /* Espace sous le titre */
+}
+
+/* Style des icônes de médias sociaux */
+.social-buttons2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espace entre les icônes */
+}
+
+.social-buttons2 a img {
+    width: 80px; /* Ajuste la taille des icônes */
+    height: 80px;
+}
+
+.site-footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* Texte du footer */
+.site-footer p {
+    margin: 0;
+    font-size: 14px;
 }
