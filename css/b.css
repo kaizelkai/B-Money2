@@ -283,6 +283,13 @@ nav a:hover .menuEffet {
         margin: 1px;
     }
 
+    nav {
+        display: none; /* Cache la navigation sur les petits écrans */
+    }
+    .bt_buy{
+        margin-left: 40%;
+        margin-right: 10%;
+    }
     
 }
 
